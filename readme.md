@@ -134,6 +134,7 @@ cd secure-file-storage
 
 ```bash
 pip install cryptography
+pip install pyotp
 ```
 
 ---
