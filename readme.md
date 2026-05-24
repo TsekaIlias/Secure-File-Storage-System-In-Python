@@ -1,6 +1,4 @@
-# =========================================
-# Secure File Storage System
-# =========================================
+#  Secure File Storage System
 
 A Python-based secure file storage application that demonstrates modern cybersecurity concepts such as:
 
@@ -17,18 +15,16 @@ This project was developed as part of a cybersecurity / cryptography assignment.
 
 ---
 
-# ========================
-# Features
-# ========================
+#  Features
 
-## [ Authentication ]
+##  User Authentication
 - Secure password hashing using `PBKDF2-HMAC-SHA256`
 - Random salt generation for each user
 - Safe password verification using `secrets.compare_digest`
 
 ---
 
-## [ OTP-Based Registration ]
+##  OTP-Based Registration
 - Admin generates One-Time Passwords (OTP)
 - OTPs are:
   - Single-use
@@ -37,7 +33,7 @@ This project was developed as part of a cybersecurity / cryptography assignment.
 
 ---
 
-## [ RSA Key Pair Generation ]
+##  RSA Key Pair Generation
 Each registered user automatically receives:
 - RSA Private Key
 - RSA Public Key
@@ -46,7 +42,7 @@ Keys are stored in the `keys/` directory.
 
 ---
 
-## [ Secure File Encryption ]
+##  Secure File Encryption
 Files are encrypted using:
 - `AES-GCM (256-bit)` symmetric encryption
 
@@ -57,7 +53,7 @@ This provides:
 
 ---
 
-## [ Digital Signatures ]
+##  Digital Signatures
 Uploaded files are digitally signed using:
 - RSA-PSS
 - SHA-256 hashing
@@ -69,14 +65,14 @@ This guarantees:
 
 ---
 
-## [ Replay Attack Protection ]
+##  Replay Attack Protection
 The system prevents replay attacks using:
 - Unique cryptographic nonces
 - Nonce validation database
 
 ---
 
-## [ Secure File Storage ]
+##  Secure File Storage
 Uploaded files are stored as:
 - Encrypted binary file (`.enc`)
 - Metadata JSON file (`.json`)
@@ -90,9 +86,7 @@ Metadata includes:
 
 ---
 
-# ========================
-# Technologies Used
-# ========================
+#  Technologies Used
 
 - Python 3
 - Cryptography Library
@@ -104,9 +98,7 @@ Metadata includes:
 
 ---
 
-# ========================
-# Project Structure
-# ========================
+#  Project Structure
 
 ```bash
 project/
@@ -127,11 +119,9 @@ project/
 
 ---
 
-# ========================
-# Installation
-# ========================
+#  Installation
 
-## 1) Clone the repository
+## 1️ Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/secure-file-storage.git
@@ -140,7 +130,7 @@ cd secure-file-storage
 
 ---
 
-## 2) Install dependencies
+## 2️ Install dependencies
 
 ```bash
 pip install cryptography
@@ -148,9 +138,7 @@ pip install cryptography
 
 ---
 
-# ========================
-# Running the Program
-# ========================
+# > Running the Program
 
 ```bash
 python project2.py
@@ -158,9 +146,7 @@ python project2.py
 
 ---
 
-# ========================
-# Menu Options
-# ========================
+# = Menu Options
 
 ```text
 1. Register (OTP)
@@ -172,9 +158,7 @@ python project2.py
 
 ---
 
-# ========================
-# Example Workflow
-# ========================
+#  Example Workflow
 
 ## Admin Issues OTP
 
@@ -236,9 +220,7 @@ The system will:
 
 ---
 
-# ========================
-# Security Concepts Implemented
-# ========================
+#  Security Concepts Implemented
 
 | Security Feature | Implementation |
 |---|---|
@@ -252,38 +234,19 @@ The system will:
 
 ---
 
-# ========================
-# Important Notes
-# ========================
+# ! Important Notes !
 
 - This project is designed for educational purposes.
 - Encryption keys are stored locally in metadata files.
-
-In production systems:
-- Keys should never be stored alongside encrypted data.
-- Secure key management systems should be used.
-- OTP expiration should be implemented.
-
----
-
-# ========================
-# Possible Improvements
-# ========================
-
-- Add OTP expiration time
-- Add GUI interface
-- Add database support
-- Add user roles & permissions
-- Add encrypted key storage
-- Add file sharing system
-- Add logging and monitoring
-- Add JWT/session authentication
+- In production systems:
+  - Keys should never be stored alongside encrypted data.
+  - Secure key management systems should be used.
+  - OTP expiration should be implemented.
 
 ---
 
-# ========================
-# Learning Outcomes
-# ========================
+
+#  Learning Outcomes
 
 This project demonstrates practical usage of:
 - Applied cryptography
@@ -295,8 +258,6 @@ This project demonstrates practical usage of:
 
 ---
 
-# ========================
 # Author
-# ========================
 
 Developed as a cybersecurity / cryptography assignment project.
