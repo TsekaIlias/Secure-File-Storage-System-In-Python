@@ -115,3 +115,161 @@ project/
 └── secure_storage/
     ├── file.enc
     └── file.json
+```
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/yourusername/secure-file-storage.git
+cd secure-file-storage
+```
+
+---
+
+## 2️⃣ Install dependencies
+
+```bash
+pip install cryptography
+```
+
+---
+
+# ▶️ Running the Program
+
+```bash
+python project2.py
+```
+
+---
+
+# 📋 Menu Options
+
+```text
+1. Register (OTP)
+2. Login
+3. Upload File
+4. Download File
+0. Exit
+```
+
+---
+
+# 🔄 Example Workflow
+
+## Admin Issues OTP
+
+```python
+admin_issue_otp("john")
+```
+
+Example OTP:
+
+```text
+AB12CD34
+```
+
+---
+
+## User Registration
+
+```text
+Username: john
+OTP: AB12CD34
+Password: mypassword
+```
+
+---
+
+## Login
+
+```text
+Username: john
+Password: mypassword
+```
+
+---
+
+## Upload File
+
+```text
+Path: test.txt
+```
+
+The system will:
+1. Sign the file
+2. Generate a nonce
+3. Encrypt the file
+4. Store encrypted data securely
+
+---
+
+## Download File
+
+```text
+Filename: test.txt
+```
+
+The system will:
+1. Decrypt the file
+2. Verify the digital signature
+3. Restore the original file
+
+---
+
+# 🔒 Security Concepts Implemented
+
+| Security Feature | Implementation |
+|---|---|
+| Password Hashing | PBKDF2-HMAC-SHA256 |
+| Salt | Random 16-byte salt |
+| Encryption | AES-GCM 256 |
+| Public Key Crypto | RSA 2048 |
+| Digital Signatures | RSA-PSS |
+| Replay Protection | Nonce validation |
+| Secure Comparison | `secrets.compare_digest()` |
+
+---
+
+# ⚠️ Important Notes
+
+- This project is designed for educational purposes.
+- Encryption keys are stored locally in metadata files.
+- In production systems:
+  - Keys should never be stored alongside encrypted data.
+  - Secure key management systems should be used.
+  - OTP expiration should be implemented.
+
+---
+
+# 🚀 Possible Improvements
+
+- Add OTP expiration time
+- Add GUI interface
+- Add database support
+- Add user roles & permissions
+- Add encrypted key storage
+- Add file sharing system
+- Add logging and monitoring
+- Add JWT/session authentication
+
+---
+
+# 📖 Learning Outcomes
+
+This project demonstrates practical usage of:
+- Applied cryptography
+- Authentication systems
+- Secure file handling
+- Digital signatures
+- Secure software design
+- Anti-replay protection mechanisms
+
+---
+
+# 👨‍💻 Author
+
+Developed as a cybersecurity / cryptography assignment project.
